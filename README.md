@@ -1,9 +1,3 @@
----
-title: "VarSleuth"
-output: github_document
-include: false
----
-
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
 
