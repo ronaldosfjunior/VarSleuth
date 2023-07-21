@@ -46,4 +46,3 @@ We welcome contributions from the community! If you'd like to contribute, please
 
 # License
 
-VarSleuth is open source software released under the MIT license. See the LICENSE file for more details.
