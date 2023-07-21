@@ -1,7 +1,7 @@
 ---
 title: "VarSleuth"
 output: github_document
-hide: yes
+include: false
 ---
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
@@ -34,9 +34,8 @@ devtools::install_github("ronaldosfjunior/VarSleuth")
 This is a basic example which shows you how to solve a common problem:
 
 
-```{r, eval=F}
+```r
 library(VarSleuth)
-#> Error in library(VarSleuth): there is no package called 'VarSleuth'
 ## basic example code
 # UNDER CONSTRUCTION
 ```
