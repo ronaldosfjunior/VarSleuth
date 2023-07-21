@@ -1,10 +1,17 @@
 Package: VarSleuth
-Title: What the Package Does (One Line, Title Case)
-Version: 0.0.0.9000
+Title: R package for interpreting genetic variants according to the ACMG guidelines.
+Version: 1.0.0.9000
 Authors@R: 
-    person("First", "Last", , "first.last@example.com", role = c("aut", "cre"),
-           comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
+    person("Ronaldo", "Francisco Jr", , "ronaldoj@stanford.edu", role = c("aut", "cre"),
+           comment = c(ORCID = "0000-0001-7419-3907"))
+Description: VarSleuth is an open-source tool for genomic variant analysis 
+    and interpretation. It provides an integrated environment for 
+    annotating, filtering, and interpreting genetic variants for whole 
+    genome sequencing (WGS) and exome sequencing data. Incorporating the 
+    ACMG guidelines, VarSleuth aims to offer improved accuracy and 
+    usability for variant interpretation. It offers clinicians, geneticists, 
+    and researchers a comprehensive solution for identifying pathogenic 
+    variants and exploring their potential clinical impact.
 License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
     license
 Encoding: UTF-8
