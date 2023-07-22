@@ -36,31 +36,34 @@ if (!require(knitr)) {
 # Render the README.Rmd to a Markdown file
 knitr::knit("README.Rmd")
 
+# Read the .md file into a character vector
+lines <- readLines("README.md")
+
+# Find the lines to exclude
+exclude <- grep("title|output", lines)
+
+# Remove the excluded lines
+lines <- lines[-exclude]
+
+# Write the lines back to the .md file
+writeLines(lines, "README.md")
+
+
 # Load the git2r package
 if (!require(git2r)) {
   install.packages("git2r")
 }
 
-# Add both files to the staging area
+library(git2r)
+repo <- git2r::repository(".")
 git2r::add(repo, "README.Rmd")
-git2r::add(repo, "README.md")
+git2r::commit(repo, "Update README.Rmd")
+# Delete the existing remote
+git2r::remote_remove(repo, "origin")
 
-# Commit the changes
-git2r::commit(repo, "Update README files")
-system("git commit --no-verify -m 'Update README files'")
-# Get a reference to your repository
-repository_path = "/home/ronaldoj/Dropbox/Stanford/Projects/P5/VarSleuth/"
-repo <- git2r::repository("/home/ronaldoj/Dropbox/Stanford/Projects/P5/VarSleuth")
+# Add the remote back with the correct SSH URL
+git2r::remote_add(repo, "origin", "git@github.com:ronaldosfjunior/VarSleuth.git")
 
-# Add the README.Rmd and README.md to the staging area for git
-#git2r::add(repo, "README.Rmd")
-git2r::add(repo, "README.md")
 
-# Commit the changes
-git2r::commit(repo, "Update README.md")
-git2r::commit(repo, "Added a README")
-
-list.files(repository_path)
-git2r::status(repo)
-git2r::add(repo, paste0(repository_path,  "README.md"))
-git2r::commit(repo, "Update README.md")
+git2r::push(repo, "origin", "master")  # replace 'master' with your branch name if different
+remotes(repo)

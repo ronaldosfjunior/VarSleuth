@@ -1,19 +1,17 @@
-<!-- README.md is generated from README.Rmd. Please edit that file -->
-
-
 
 # VarSleuth
 
 <!-- badges: start -->
 <!-- badges: end -->
 
-VarSleuth is an open-source R package for interpreting genetic variants according to the ACMG guidelines. 
+VarSleuth is an open-source R package for interpreting genetic variants
+according to the ACMG guidelines.
 
 ## Installation
 
 You can install VarSleuth directly from GitHub with:
 
-```r
+``` r
 # If you haven't installed 'devtools' yet, do so first
 if (!require(devtools)) {
   install.packages("devtools")
@@ -27,8 +25,7 @@ devtools::install_github("ronaldosfjunior/VarSleuth")
 
 This is a basic example which shows you how to solve a common problem:
 
-
-```r
+``` r
 library(VarSleuth)
 ## basic example code
 # UNDER CONSTRUCTION
@@ -36,7 +33,7 @@ library(VarSleuth)
 
 # Contributing
 
-We welcome contributions from the community! If you'd like to contribute, please fork the repository and submit a pull request.
+We welcome contributions from the community! If you’d like to
+contribute, please fork the repository and submit a pull request.
 
 # License
-

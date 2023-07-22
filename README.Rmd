@@ -39,7 +39,7 @@ devtools::install_github("ronaldosfjunior/VarSleuth")
 
 This is a basic example which shows you how to solve a common problem:
 
-```{r example, eval=F}
+```{r, eval=F}
 library(VarSleuth)
 ## basic example code
 # UNDER CONSTRUCTION
